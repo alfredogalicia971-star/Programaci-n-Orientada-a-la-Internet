@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- MODAL CONFIG Y TIENDA - DECLARADOS UNA SOLA VEZ ---
+  // --- MODAL CONFIG Y TIENDA ---
   const btnConfig = document.getElementById('btnConfig');
   const btnTiendaNav = document.getElementById('btnVistaTiendaNav');
   const modalConfig = document.getElementById('modalConfig');

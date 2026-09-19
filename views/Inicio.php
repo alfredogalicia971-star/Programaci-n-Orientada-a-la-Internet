@@ -29,7 +29,11 @@ opcache_reset();
 
   <div class="nav-right">
     
+<<<<<<< HEAD
     <!--Monedas digitales -->
+=======
+    <!-- Monedas digitales -->
+>>>>>>> 9cb218c6109fdb8b1285ce0491b9ec972fdb49ff
     <div class="monedas-display" id="displayMonedas">
       <img src="../imagenes/iconmoneda.png" alt="moneda">
       <span id="cantidadMonedas">1250</span>
@@ -40,11 +44,15 @@ opcache_reset();
       <img src="../imagenes/icontienda.png" alt="tienda">
     </button>
 
+<<<<<<< HEAD
      <a class="icon-btn" id="btnLocaciones" href="../views/Turismo.php" title="Locaciones">
   <img src="../imagenes/map.png" alt="locaciones">
 </a>
 
     <!-- Tu boton de configuracion-->
+=======
+    <!-- Tu boton de configuracion -->
+>>>>>>> 9cb218c6109fdb8b1285ce0491b9ec972fdb49ff
     <button class="icon-btn" id="btnConfig">
       <img src="../imagenes/iconoconfiguracion.png" alt="icono">
     </button>
