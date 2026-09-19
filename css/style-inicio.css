@@ -552,6 +552,12 @@ nav {
 .avatar-wrapper.deco-enojo .avatar-deco {
   background-image: url("../imagenes/Enojo.png");
 }
+.avatar-wrapper.deco-cerro .avatar-deco {
+  background-image: url("../imagenes/Cerro.png");
+}
+.avatar-wrapper.deco-cascada .avatar-deco {
+  background-image: url("../imagenes/Cascada.png");
+}
 
 
 .avatar-wrapper:not([class*="deco-"]) {

@@ -1,4 +1,6 @@
-
+<?php
+opcache_reset();
+?>
 
 
 <!DOCTYPE html>
@@ -27,18 +29,22 @@
 
   <div class="nav-right">
     
-    <!-- NUEVO: Monedas digitales -->
+    <!--Monedas digitales -->
     <div class="monedas-display" id="displayMonedas">
       <img src="../imagenes/iconmoneda.png" alt="moneda">
       <span id="cantidadMonedas">1250</span>
     </div>
 
-    <!-- NUEVO: Boton Tienda -->
+    <!-- Boton Tienda -->
     <button class="icon-btn" id="btnVistaTiendaNav" title="Tienda">
       <img src="../imagenes/icontienda.png" alt="tienda">
     </button>
 
-    <!-- Tu boton de configuracion que ya tenias -->
+     <a class="icon-btn" id="btnLocaciones" href="../views/Turismo.php" title="Locaciones">
+  <img src="../imagenes/map.png" alt="locaciones">
+</a>
+
+    <!-- Tu boton de configuracion-->
     <button class="icon-btn" id="btnConfig">
       <img src="../imagenes/iconoconfiguracion.png" alt="icono">
     </button>
@@ -389,7 +395,7 @@
 
       <div class="config-scroll">
         <h2>Decoraciones de Avatar</h2>
-        <p class="selector-desc">Estilo bundle de Discord</p>
+        <p class="selector-desc">Estilos</p>
         
         <div class="avatar-options tienda-options">
          
@@ -446,6 +452,25 @@
               <div class="avatar-deco"></div>
             </div>
             <span>Navidad</span>
+            <div class="precio-badge"><img src="../imagenes/iconmoneda.png"> 100</div>
+          </div>
+           
+          <div class="avatar-option bloqueado" data-deco="deco-cerro" data-precio="100" data-nombre="Cerro">
+            <div class="avatar-wrapper deco-cerro">
+              <img src="../imagenes/imagen1.jpg" alt="avatar" class="avatar">
+              <div class="avatar-deco"></div>
+            </div>
+            <span>Cerro</span>
+            <div class="precio-badge"><img src="../imagenes/iconmoneda.png"> 100</div>
+          </div>
+
+
+           <div class="avatar-option bloqueado" data-deco="deco-cascada" data-precio="100" data-nombre="Cascada">
+            <div class="avatar-wrapper deco-cascada">
+              <img src="../imagenes/imagen1.jpg" alt="avatar" class="avatar">
+              <div class="avatar-deco"></div>
+            </div>
+            <span>Cascada</span>
             <div class="precio-badge"><img src="../imagenes/iconmoneda.png"> 100</div>
           </div>
 

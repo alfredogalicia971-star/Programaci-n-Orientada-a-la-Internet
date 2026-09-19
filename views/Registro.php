@@ -1,4 +1,6 @@
-
+<?php
+opcache_reset();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,7 +22,7 @@
 <div class="contenedor-principal">
 <div class="video-container">
   <video autoplay muted loop playsinline>
-    <source src="../Videos/VideoContenedor.mp4" type="video/mp4">
+    <source src="../Videos/VideoContenedor2.mp4" type="video/mp4">
   </video>
 </div>
 
