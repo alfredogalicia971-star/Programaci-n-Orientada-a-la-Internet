@@ -27,18 +27,18 @@
 
   <div class="nav-right">
     
-    <!-- NUEVO: Monedas digitales -->
+    <!-- Monedas digitales -->
     <div class="monedas-display" id="displayMonedas">
       <img src="../imagenes/iconmoneda.png" alt="moneda">
       <span id="cantidadMonedas">1250</span>
     </div>
 
-    <!-- NUEVO: Boton Tienda -->
+    <!-- Boton Tienda -->
     <button class="icon-btn" id="btnVistaTiendaNav" title="Tienda">
       <img src="../imagenes/icontienda.png" alt="tienda">
     </button>
 
-    <!-- Tu boton de configuracion que ya tenias -->
+    <!-- Tu boton de configuracion -->
     <button class="icon-btn" id="btnConfig">
       <img src="../imagenes/iconoconfiguracion.png" alt="icono">
     </button>
