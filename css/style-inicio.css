@@ -1,0 +1,1068 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden; 
+}
+
+body {
+  background: #313338;
+}
+
+/* Nav */
+nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 16px 24px;
+  width: 100%; 
+  background-size: 400% 400%;
+  overflow: hidden;
+}
+
+
+.nav-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5; /* transparencia */
+  pointer-events: none;
+  z-index: 0;
+}
+
+
+.nav-left img {
+  height: 80px;
+  width: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.nav-center {
+  flex: 1; 
+  position: relative;
+  z-index: 1;
+}
+
+.icon-btn img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+
+/*iconos*/
+
+.icon-btn {
+  background: transparent;
+  border: none;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.icon-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+
+
+
+
+
+.sidebar {
+  width: 240px;
+  background: #1e1e2f;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; 
+  flex-shrink: 0;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Contenido*/
+#vistaChat, #vistaLlamada {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0; 
+  overflow: hidden;
+}
+
+.perfil-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border: 2px solid white; /* borde blanco que pediste */
+  border-radius: 50px; /* lo hace tipo pill */
+  background: #2a2a40;
+  transition: all 0.3s ease;
+}
+
+.perfil-foto {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid white; /* borde blanco alrededor de la foto */
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.perfil-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.perfil-info strong {
+  color: white;
+  font-size: 14px;
+}
+
+.perfil-info span {
+  color: #aaa;
+  font-size: 12px;
+}
+
+
+.mensaje {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+
+.avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid white;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.mensaje-cuerpo {
+  display: flex;
+  flex-direction: column;
+}
+
+.mensaje-header strong {
+  color: #5e17ea; /* verde como en tu imagen */
+  margin-right: 8px;
+}
+
+.mensaje-header span {
+  color: #72767d;
+  font-size: 12px;
+}
+
+.mensaje-cuerpo p {
+  color: #dcddde;
+  margin: 4px 0 0 0;
+}
+
+.mensaje-imagen {
+  margin-top: 8px;
+  max-width: 300px;
+  border-radius: 8px;
+}
+
+
+
+.chat-container {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.layout {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 112px); 
+  overflow: hidden;
+}
+
+.contenido {
+  flex: 1;
+  min-width: 0; 
+  background: #313338;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.contenido-header {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 12px 16px;
+    border-bottom: 1px solid #1e1f22;
+  color: white;
+  background: #313338;
+}
+
+.btn-agregar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%; 
+  border: none;
+  background-color: #2563eb; 
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.btn-agregar:hover {
+  background-color: #1d4ed8;
+}
+
+
+
+.barra-mensaje {
+  flex-shrink: 0;
+  margin: 0 15px 20px 15px !important; /* quita el width: calc */
+  width: auto !important;
+  position: relative !important; /* quita el sticky, ya no lo necesitas */
+  bottom: auto !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SIDEBAR 1 */
+.sidebar-servidores {
+  width: 72px;
+  background: #1e1f22;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.servidor-icono {
+  width: 48px;
+  height: 48px;
+  background: #313338;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.2s;
+  color: white;
+}
+
+.servidor-icono.activo {
+  border-radius: 16px;
+  border-color: white; 
+  background: #5e17ea;
+}
+
+.servidor-icono img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.servidor-icono:hover {
+  border-radius: 16px;
+  border-color: white;
+}
+
+/* SIDEBAR 2 */
+.sidebar-canales {
+  width: 240px;
+  background: #2b2d31;
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s;
+  overflow: hidden;
+}
+
+.canales-header {
+  padding: 16px;
+  border-bottom: 1px solid #1e1f22;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+
+.perfil-card {
+  margin: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border: 2px solid white;
+  border-radius: 50px;
+  padding: 8px;
+}
+
+.perfil-foto {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+
+
+
+
+
+
+/* MINIMIZADO */
+.sidebar-canales.minimizada {
+  width: 0;
+  padding: 0;
+}
+
+
+/*Sección de grupo y general*/
+.categoria p {
+  margin-bottom: 10px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #949ba4;
+}
+
+
+.categoria {
+  display: flex;
+  flex-direction: column;
+  gap: 1px; 
+  margin-bottom: 10px; 
+}
+
+.canal {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+  padding: 8px 10px;
+  text-decoration: none!important;
+  color: #949ba4!important;
+  border-radius: 4px;
+}
+
+.canal img {
+  width: 20px;
+  height: 20px;
+}
+
+
+.canal:hover {
+  text-decoration: none;
+  color: #dcddde;
+}
+
+.canal.activo {
+  color: white !important;
+  background: #404249;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Barra del chat*/
+
+.btn-plus {
+  width: 30px;
+  height: 30px;
+  background: #b5bac1;
+  color: #383a40;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.barra-mensaje input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 15px;
+}
+
+.barra-mensaje input::placeholder {
+  color: #6d6f78;
+}
+
+.barra-mensaje {
+  flex-shrink: 0;
+  width: auto;
+  margin: 0 15px 20px 15px;
+  background: #383a40;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  gap: 15px;
+}
+
+/* ===== SISTEMA DECORACIONES TIPO DISCORD - ARREGLADO ===== */
+
+.avatar-wrapper {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: relative;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #313338;
+  overflow: visible;
+}
+
+.avatar-wrapper .avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  border: 2px solid #313338;
+}
+
+/* La decoración va ENCIMA - Tamaño perfecto */
+.avatar-deco {
+  position: absolute;
+  top: -15%;
+  left: -15%;
+  width: 130%;
+  height: 130%;
+  pointer-events: none;
+  z-index: 3;
+  background: center / contain no-repeat;
+  transform: translateZ(0);
+}
+
+/* En la tienda los hacemos más grandes */
+.tienda-options .avatar-wrapper {
+  width: 70px;
+  height: 70px;
+}
+.tienda-options .avatar-wrapper .avatar-deco {
+  top: -20%;
+  left: -20%;
+  width: 140%;
+  height: 140%;
+}
+
+/* ---- DECORACIONES ---- */
+.avatar-wrapper.deco-fuego .avatar-deco {
+  background-image: url("../imagenes/Fuego.png");
+}
+.avatar-wrapper.deco-revolucion .avatar-deco {
+  background-image: url("../imagenes/Revolucion.png");
+}
+.avatar-wrapper.deco-independencia .avatar-deco {
+  background-image: url("../imagenes/independencia.png");
+}
+.avatar-wrapper.deco-recall .avatar-deco {
+  background-image: url("../imagenes/Recall.png");
+}
+.avatar-wrapper.deco-muertos .avatar-deco {
+  background-image: url("../imagenes/muertos.png");
+}
+.avatar-wrapper.deco-gamer .avatar-deco {
+  background-image: url("../imagenes/gamer.png");
+}
+.avatar-wrapper.deco-navidad .avatar-deco {
+  background-image: url("../imagenes/navidad.png");
+}
+.avatar-wrapper.deco-enojo .avatar-deco {
+  background-image: url("../imagenes/Enojo.png");
+}
+
+
+.avatar-wrapper:not([class*="deco-"]) {
+  border: 3px solid #4f545c;
+}
+.avatar-wrapper.deco-fire { border: 3px solid #ff7a00; }
+.avatar-wrapper.deco-rey { border: 3px solid #f1c40f; }
+
+
+
+
+
+
+
+
+
+
+
+/*MODAL*/
+.ColorWhite{
+  color: white;
+}
+
+
+.modal-overlay{
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(2px);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+.modal-overlay.activo{
+  display: flex;
+}
+.modal-contenido{
+  background:#3d0f97;
+  width: 380px; 
+  max-width: 90%; 
+  border-radius: 16px;
+  padding: 20px 22px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  animation: aparecer 0.2s ease;
+}
+
+@keyframes aparecer{
+  from{ transform: scale(0.9); opacity: 0; }
+  to{ transform: scale(1); opacity: 1; }
+}
+
+.modal-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.modal-header h3{ margin: 0; font-size: 18px; }
+
+.btn-cerrar{
+  border: 1px solid #ffffff;
+  background: #000000;
+  width: 28px; height: 28px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+}
+
+
+#formNuevaTarea{ display: flex; flex-direction: column; gap: 10px; }
+#formNuevaTarea label{ font-size: 13px; font-weight: 600; color: #ffffff; }
+#formNuevaTarea input, #formNuevaTarea select, #formNuevaTarea textarea{
+  padding: 8px 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.modal-acciones{
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 14px;
+}
+.modal-acciones button{
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  font-size: 14px;
+}
+.btn-primario{
+  background: #2563eb !important;
+  color: white !important;
+  border: none !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Cámara*/
+
+#vistaLlamada{
+  display: none;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.llamada-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 180px);
+  gap: 20px;
+  padding: 20px;
+}
+
+.video-wrapper{
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  background: #1e1f22;
+  border-radius: 16px;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#miVideo{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+
+#placeholderLlamada{
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.status-badge{
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.llamada-titulo{
+  margin: 0;
+  font-size: 20px;
+}
+
+.llamada-controles{
+  display: flex;
+  gap: 15px;
+}
+
+.btn-llamada{
+  padding: 12px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: none;
+  font-size: 14px;
+  background-color: #3d0f97;
+  color: white;
+}
+
+.btn-colgar{
+  background: #3d0f97;
+  color: white;
+  display: none;
+}
+
+
+
+/*Configuracion*/
+
+
+.modal-config{
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: #232428;
+  z-index: 10000;
+  animation: aparecer 0.2s ease;
+}
+.modal-config.activo{ display: block; }
+
+.modal-config-wrapper{
+  display: flex;
+  width: 100%;
+  height: 100vh; 
+  overflow: hidden;
+}
+
+.config-sidebar{
+  width: 320px;
+  background: #2b2d31;
+  padding: 20px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow-y: auto;
+  border-right: 1px solid #1e1f22;
+}
+
+.config-perfil-card{
+  display: flex;
+  gap: 12px;
+  background: #232428;
+  padding: 10px;
+  border-radius: 8px;
+  align-items: center;
+}
+.config-perfil-card img{ width: 42px; height: 42px; border-radius: 50%; }
+.config-perfil-card strong{ display:block; color:white; font-size:14px; }
+.config-perfil-card span{ color:#949ba4; font-size:12px; }
+
+.config-search{
+  background: #1e1f22;
+  padding: 8px 10px;
+  border-radius: 6px;
+  color: #949ba4;
+  font-size: 14px;
+  border: 1px solid #2b2d31;
+}
+
+.config-menu{ display:flex; flex-direction:column; gap:4px; }
+.config-menu a{
+  color:#909192; text-decoration:none; padding:8px 10px;
+  border-radius:4px; font-size:14px; display:flex; gap:8px;
+}
+.config-menu a.active, .config-menu a:hover{ background:#404249; color:white; }
+.config-submenu{ display:flex; flex-direction:column; margin-left:10px; border-left:1px solid #3f4147; padding-left:8px; }
+.config-submenu a.active-sub{ color:white; border-left:2px solid white; margin-left:-10px; padding-left:18px; }
+.config-divider{ height:1px; background:#3f4147; margin:10px 0; }
+.config-menu small{ color:#949ba4; padding:0 10px; margin-top:10px; text-transform:uppercase; font-size:11px; }
+
+.config-content{
+  flex: 1;
+  background: #313338;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; 
+  min-height: 0;
+}
+.config-topbar{
+  flex-shrink: 0; /* el header no hace scroll */
+  display:flex; justify-content:space-between; align-items:center;
+  padding:16px 24px; border-bottom:1px solid #1e1f22; color:white;
+}
+.config-close{
+  background:#2b2d31; border:1px solid #4e5058; color:white;
+  width:36px; height:36px; border-radius:50%; cursor:pointer; font-size:18px;
+}
+.config-scroll{ 
+  flex: 1; 
+  overflow-y: auto; 
+  overflow-x: hidden;
+  padding: 10px 32px 40px 32px; 
+  min-height: 0;
+}
+
+.config-scroll::-webkit-scrollbar, .config-sidebar::-webkit-scrollbar{
+  width: 8px;
+}
+
+.config-scroll::-webkit-scrollbar-thumb, .config-sidebar::-webkit-scrollbar-thumb{
+  background: #1a1b1e;
+  border-radius: 4px;
+}
+
+.config-scroll h2{ color:white; margin:20px 0; font-size:22px; }
+
+.config-row{
+  display:flex; justify-content:space-between; align-items:center;
+  padding:18px 0; border-bottom:1px solid #3f4147; color:#f2f3f5;
+}
+.config-row-right{ display:flex; align-items:center; gap:16px; }
+.config-row .muted{ color:#949ba4; font-weight:400; font-size:13px; }
+.link-blue{ color:#00a8fc; font-weight:400; text-decoration:none; font-size:13px; }
+.btn-edit{
+  background:#2b2d31; border:1px solid #4e5058; color:white;
+  padding:8px 18px; border-radius:4px; cursor:pointer; min-width:70px;
+}
+.config-divider-line{ height:1px; background:#3f4147; margin:30px 0; }
+.config-row.clickable{ cursor:pointer; }
+
+
+
+/* SELECTOR DE AVATAR EN CONFIG */
+.avatar-selector-section{
+  margin-bottom: 10px;
+}
+.selector-desc{
+  color:#949ba4;
+  font-size:13px;
+  margin: -10px 0 16px 0;
+}
+.avatar-options{
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.avatar-option{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  background: #2b2d31;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  padding: 14px 16px;
+  cursor: pointer;
+  transition: 0.2s;
+  min-width: 90px;
+}
+.avatar-option:hover{
+  background: #404249;
+  transform: translateY(-2px);
+}
+.avatar-option.active{
+  border-color: #5865f2;
+  background: #404249;
+}
+.avatar-option span{
+  color: #dcddde;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/*Botón salir*/
+.cerrar-row{
+  border-top: 1px solid #3f4147 !important;
+  border-bottom: none !important;
+  padding-top: 24px !important;
+  margin-top: 20px;
+}
+
+.btn-salir-texto{
+  color: #f23f42;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: 0.2s;
+}
+
+.btn-salir-texto:hover{
+  background: rgba(242, 63, 66, 0.1);
+  text-decoration: underline;
+}
+
+
+/*Tienda y monedas
+*/
+.nav-right {
+  gap: 12px; 
+}
+
+.monedas-display {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(0,0,0,0.35);
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 0px 6px;
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  position: relative;
+  z-index: 1;
+}
+
+.monedas-display img {
+  width: 50px !important;
+  height: 50px !important;
+}
+
+.monedas{
+  width: 50px !important;
+  height: 50px !important;
+}
+
+
+/* Estilo para la nueva vista de tienda, independiente */
+.tienda-container {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.tienda-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.tienda-item {
+  background: #2b2d31;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  color: white;
+  border: 1px solid #1e1f22;
+}
+
+#vistaTienda {
+  display: none;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+/*Tienda*/
+/* TIENDA */
+.tienda-monedas-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #2b2d31;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid #3a3a3c;
+}
+.tienda-monedas-top img { width: 22px; height: 22px; }
+.tienda-monedas-top span { color: #ffd700; font-weight: 800; font-size: 18px; }
+.tienda-monedas-top small { color: #b5bac1; }
+
+.tienda-options .avatar-option {
+  position: relative;
+  padding-bottom: 28px;
+}
+
+.precio-badge {
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1e1f22;
+  border: 1px solid #3a3a3c;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #ffd700;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+}
+.precio-badge img { width: 12px; height: 12px; }
+.precio-badge.gratis {
+  background: #23a55d;
+  color: white;
+  border-color: #23a55d;
+}
+.avatar-option.bloqueado { opacity: 0.9; }
+.avatar-option.bloqueado .avatar-wrapper { filter: grayscale(0.3); }
+
+.monedas-display {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #2b2d31;
+  padding: 5px 12px;
+  border-radius: 20px;
+  margin-right: 8px;
+}
+.monedas-display img { width: 20px; height: 20px; }
+.monedas-display span { color: #ffffff; font-weight: 800; }
+
+#vistaChat, #vistaLlamada {
+  will-change: auto;
+  transform: translateZ(0); /* fuerza GPU solo aquí, no en todos los avatares */
+  backface-visibility: hidden;
+}
+.avatar-wrapper{
+  transition: none !important; /* quita la transición que causa el lag al spamear */
+}
+
+
+
+
+

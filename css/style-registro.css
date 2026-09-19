@@ -1,0 +1,169 @@
+ body {
+  margin: 0;
+  min-height: 100vh;
+  overflow: hidden; 
+}
+ 
+.contenedor-principal {
+  display: flex;
+  justify-content: center;  
+  align-items: center;     
+  gap: 0px;                
+  min-height: 100vh;
+}
+
+
+.video-container,
+.Formulario {
+  width: 550px;
+  height: 500px;
+}
+
+
+.video-container video {
+width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  pointer-events: none;
+ 
+}
+
+
+ .Formulario{
+display: flex;
+flex-direction: column;
+justify-content: center;
+width: 550px;
+padding: 30px;
+background-color: #000000 ;
+background-size: cover;
+background-position: center;
+box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+color: #ffffff;
+}
+
+
+    
+    .Formulario h1{
+    text-align: center;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.79);
+    }
+    
+
+    .Formulario .username{
+    position:relative;
+    border-bottom: 2px solid #ffffff;
+    margin: 30px 0;
+    }
+    
+    .username input{
+    width: 100%;
+    padding: 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background:none;
+    outline:none;
+    color: #ffffff;
+    }
+    
+    .username label{
+    position: absolute;
+    top:60%;
+    left:5px;
+    color:#adadad00;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s; 
+    }
+    
+    
+    .username span::before{
+    content: '';
+    position:absolute;
+    top:40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #ffffff;
+    transition: .5s;
+    
+    
+    }
+    
+    .username input:focus ~ label,
+    .username input:focus ~ label{
+    top:-5px;
+    color:#ffffff;
+    }
+    
+    
+    .username input:focus ~ span::before,
+    .username input:focus ~ span::before{
+    width: 100%;
+    }
+    
+    
+    .recordar{
+        margin: -5px 0 20px 5px;
+        color: rgb(255, 255, 255);
+        cursor:pointer;
+    
+    }
+    
+   
+    
+    input[type="submit"]{
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+    background: #000000;
+    border-radius: 25px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    }
+    
+    input[type="submit"]:hover{
+        border-color: rgb(14, 21, 117);
+        transition: .5s;
+    
+    }
+    
+    .registrarse{
+    margin: 30px 0;
+    text-align: center;
+    font-size: 16px;
+    color:rgb(255, 255, 255);
+    
+    }
+    
+    .registrarse a{
+    color:rgb(64, 142, 206);
+    text-decoration: none;
+    
+    }
+    
+    .registrarse a:hover{
+    text-decoration: underline;
+    }
+    
+
+#video-fondo {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  z-index: -1;
+}
+
+.contenido {
+  position: relative;
+  z-index: 1;
+}
+    
