@@ -5,7 +5,7 @@ Proyecto de chat, videollamada y tienda de avatares con sistema de monedas Recoi
 ## Integrantes del equipo
 - José Alfredo Gonález Galicia - 1908601 
 - Dalia Garcia Landa - 1950851 
-- Diego Alejandro Oyervides Bazaldua - 1998716a 
+- Diego Alejandro Oyervides Bazaldua - 1998716
 
 ## Tecnologías
 - PHP
