@@ -12,14 +12,51 @@ opcache_reset();
   <link rel="stylesheet" href="../css//style-turismo.css">
 </head>
 <body>
-  <header>
-  <a href="../views/Inicio.php" class="header-btn" aria-label="Volver">
-    <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2">
-      <path d="M15 18l-6-6 6-6"/>
-    </svg>
-  </a>
-  <h1>Nuevo León - Lugares Turisticos</h1>
-</header>
+
+
+<nav>
+
+ <video class="nav-video" autoplay muted loop playsinline preload="auto">
+  <source src="../videos/VideoRegistro.mp4" type="video/mp4">
+</video>
+
+  <div class="nav-left">
+    <img src="../imagenes/Logo.png" alt="Logo">
+  </div>
+  
+  <div class="nav-center"></div>
+
+  <div class="nav-right">
+  
+
+    <div class="monedas-display" id="displayMonedas">
+      <img src="../imagenes/iconmoneda.png" alt="moneda">
+      <span id="cantidadMonedas">1250</span>
+    </div>
+
+    <!-- Boton Tienda -->
+    <button class="icon-btn" id="btnVistaTiendaNav" title="Tienda">
+      <img src="../imagenes/icontienda.png" alt="tienda">
+    </button>
+
+     <a class="icon-btn" id="btnLocaciones" href="../views/Turismo.php" title="Locaciones">
+  <img src="../imagenes/map.png" alt="locaciones">
+</a>
+
+    <button class="icon-btn" id="btnConfig">
+      <img src="../imagenes/iconoconfiguracion.png" alt="icono">
+    </button>
+  </div>
+</nav>
+
+
+
+
+  <h1 id="Turismo">
+     Nuevo León - Lugares Turisticos
+    </h1>
+
+ 
 <br>
   <main class="container">
 
@@ -33,6 +70,7 @@ opcache_reset();
         <div class="meta"><strong>🚗 Cómo llegar</strong><span>Desde Escobedo: Av. Raúl Salinas > Gómez Morín > Av. Chipinque. 40 min en carro. Estacionamiento $50.</span></div>
         <div class="meta"><strong>💡 Tip</strong><span>Abre 5:30 AM - 8:00 PM todos los días. Lleva agua, bloqueador y llega temprano para ver el amanecer.</span></div>
         <a class="btn" href="https://www.google.com/maps/search/Parque+Ecológico+Chipinque" target="_blank">Ver en mapa</a>
+        <a class="btn" href="Inicio.php" target="_blank">Foro</a>
       </div>
     </section>
 
@@ -46,6 +84,7 @@ opcache_reset();
         <div class="meta"><strong>🚗 Cómo llegar</strong><span>Desde Escobedo: Carretera Nacional hacia el sur hasta Santiago. 1h10 min. Hay transporte de El Alamo.</span></div>
         <div class="meta"><strong>💡 Tip</strong><span>Entrada ~$40. Puedes subir a caballo o cuatrimoto. Ve entre semana para evitar filas.</span></div>
         <a class="btn" href="https://www.google.com/maps/search/Cascada+Cola+de+Caballo" target="_blank">Ver en mapa</a>
+        <a class="btn" href="Inicio.php" target="_blank">Foro</a>
       </div>
     </section>
 
@@ -59,6 +98,7 @@ opcache_reset();
         <div class="meta"><strong>🚗 Cómo llegar</strong><span>Desde Escobedo: Av. Lincoln > Carr. a García. 45 min. Teleférico de 5 min para subir.</span></div>
         <div class="meta"><strong>💡 Tip</strong><span>Martes a domingo 9AM-5PM. Lunes cerrado. Temperatura adentro 18°C, lleva chamarra ligera.</span></div>
         <a class="btn" href="https://www.google.com/maps/search/Grutas+de+García" target="_blank">Ver en mapa</a>
+       <a class="btn" href="Inicio.php" target="_blank">Foro</a>
       </div>
     </section>
 
@@ -72,6 +112,7 @@ opcache_reset();
         <div class="meta"><strong>🚗 Cómo llegar</strong><span>Desde Escobedo: Metro Línea 1 hasta Parque Fundidora o por Constitución. 30 min.</span></div>
         <div class="meta"><strong>💡 Tip</strong><span>Gratis. Renta bici, pasea en lancha por Santa Lucía y visita Horno3 al atardecer.</span></div>
         <a class="btn" href="https://www.google.com/maps/search/Parque+Fundidora+Monterrey" target="_blank">Ver en mapa</a>
+        <a class="btn" href="Inicio.php" target="_blank">Foro</a>
       </div>
     </section>
 
@@ -85,6 +126,7 @@ opcache_reset();
         <div class="meta"><strong>🚗 Cómo llegar</strong><span>Desde Escobedo: Morones Prieto > Blvd. Díaz Ordaz > La Huasteca. 35 min. Entrada libre.</span></div>
         <div class="meta"><strong>💡 Tip</strong><span>Ve al amanecer para fotos. Lleva 2L de agua, no hay sombra. Ideal para bici de ruta y escalada.</span></div>
         <a class="btn" href="https://www.google.com/maps/search/La+Huasteca+Santa+Catarina" target="_blank">Ver en mapa</a>
+        <a class="btn" href="Inicio.php" target="_blank">Foro</a>
       </div>
     </section>
 
