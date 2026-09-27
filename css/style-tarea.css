@@ -1,0 +1,96 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  width: 100%;
+  overflow-x: hidden; 
+}
+body {
+  background: #313338;
+}
+
+/* ===== CONTENEDOR MODAL TAREA ===== */
+.modal-overlay{
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(2px);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+.modal-overlay.activo{
+  display: flex;
+}
+.modal-contenido{
+  background:#3d0f97;
+  width: 380px; 
+  max-width: 90%; 
+  border-radius: 16px;
+  padding: 20px 22px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  animation: aparecer 0.2s ease;
+}
+@keyframes aparecer{
+  from{ transform: scale(0.9); opacity: 0; }
+  to{ transform: scale(1); opacity: 1; }
+}
+
+
+.modal-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.modal-header h3{ margin: 0; font-size: 18px; }
+.ColorWhite{
+  color: white;
+}
+
+/* ===== BOTON CERRAR ===== */
+.btn-cerrar{
+  border: 1px solid #ffffff;
+  background: #000000;
+  width: 28px; height: 28px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+}
+
+
+#formNuevaTarea{ display: flex; flex-direction: column; gap: 10px; }
+#formNuevaTarea label{ font-size: 13px; font-weight: 600; color: #ffffff; }
+#formNuevaTarea input, #formNuevaTarea select, #formNuevaTarea textarea{
+  padding: 8px 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+.modal-acciones{
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 14px;
+}
+.modal-acciones button{
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  font-size: 14px;
+}
+.btn-primario{
+  background: #2563eb;
+  color: white;
+  border: none;
+}
